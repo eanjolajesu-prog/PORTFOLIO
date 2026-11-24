@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FinPay interactive front-end portfolio demonstration.">
+<title>FinPay Demo | EBENEZER ANJOLAJESU SEMILORE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f3;--panel:#fff;--ink:#172019;--muted:#788178;--green:#315d39;--lime:#c5f27b;--line:#e7ebe5}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0}.brand{font:700 1.6rem "Space Grotesk";letter-spacing:-1px}.brand span{color:#79a94c}.top a{color:var(--green);font-size:.88rem;text-decoration:none;font-weight:700}.layout{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:25px 0 60px}.side,.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px}.side{padding:22px;height:max-content}.side small{font-size:.65rem;color:var(--muted);letter-spacing:1.5px;font-weight:700}.side nav{display:grid;gap:7px;margin-top:20px}.side nav a{padding:11px 12px;border-radius:8px;color:#687269;text-decoration:none;font-size:.88rem}.side nav a.active{background:#edf5e9;color:var(--green);font-weight:700}.side .demo-note{margin-top:45px;padding:12px;background:#f4f8ef;border-radius:9px;color:#65745e;font-size:.72rem;line-height:1.5}.content h1{font:700 2rem "Space Grotesk";letter-spacing:-1px}.sub{color:var(--muted);font-size:.88rem;margin-top:5px}.balance{margin-top:24px;background:linear-gradient(120deg,#244a30,#47794a);border-radius:15px;padding:25px;color:white;display:flex;justify-content:space-between;align-items:center;gap:15px}.balance small{color:#d1e3d1;font-size:.72rem;letter-spacing:1px}.amount{font:700 clamp(1.7rem,4vw,2.5rem) "Space Grotesk";margin-top:8px}.balance button{border:1px solid #ffffff66;background:#ffffff15;color:white;border-radius:7px;padding:9px 12px;cursor:pointer}.actions{display:flex;gap:10px;margin:18px 0 25px;flex-wrap:wrap}.btn{border:0;border-radius:8px;padding:11px 16px;background:var(--green);color:white;font-weight:700;cursor:pointer}.btn.alt{background:white;color:var(--green);border:1px solid var(--line)}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px}.stat{padding:18px;background:white;border:1px solid var(--line);border-radius:12px}.stat small{color:var(--muted)}.stat strong{display:block;font:600 1.35rem "Space Grotesk";margin-top:7px}.transactions{padding:21px}.tx-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.tx-head h2{font:600 1.1rem "Space Grotesk"}.search{border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:min(230px,55%);font:inherit}.tx{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-top:1px solid var(--line)}.tx-left{display:flex;align-items:center;gap:12px}.tx-icon{width:38px;height:38px;border-radius:11px;background:#edf5e9;display:grid;place-items:center}.tx-name{font-weight:700;font-size:.88rem}.tx-date{font-size:.73rem;color:var(--muted);margin-top:3px}.tx-amount{font-weight:700;font-size:.88rem}.credit{color:#43824b}.empty{padding:25px;text-align:center;color:var(--muted);font-size:.85rem}.notice{font-size:.72rem;color:var(--muted);margin-top:14px}
+.modal{position:fixed;inset:0;background:#10181099;display:none;place-items:center;padding:18px}.modal.open{display:grid}.dialog{background:white;padding:24px;border-radius:14px;width:min(390px,100%)}.dialog h2{font:700 1.3rem "Space Grotesk";margin-bottom:15px}.dialog label{display:block;font-size:.8rem;color:#59635a;margin:12px 0 5px}.dialog input,.dialog select{width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit}.dialog-actions{display:flex;gap:9px;margin-top:18px}.dialog-actions button{flex:1}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.side{padding:13px}.side nav{display:flex;overflow:auto;margin-top:10px}.side nav a{white-space:nowrap}.side .demo-note{display:none}.balance{align-items:flex-start;flex-direction:column}.stats{gap:9px}.stat{padding:14px}.transactions{padding:15px}.tx-head{align-items:flex-start;flex-direction:column}.search{width:100%}}
+</style></head>
+<body>
+<header class="wrap top"><div class="brand">fin<span>pay</span>.</div><a href="index.html">← Back to EBENEZER ANJOLAJESU SEMILORE portfolio</a></header>
+<main class="wrap layout">
+<aside class="side"><small>WORKSPACE</small><nav><a class="active" href="#overview">▦ Overview</a><a href="#transactions">↔ Transactions</a><a href="#transactions">◷ Activity</a></nav><div class="demo-note">Portfolio demo only.<br>No real account, payments or banking connection.</div></aside>
+<section class="content" id="overview">
+<h1>Good day, EBENEZER ANJOLAJESU SEMILORE 👋</h1><p class="sub">Here's a snapshot of your demo account.</p>
+<div class="balance"><div><small>TOTAL AVAILABLE BALANCE</small><div class="amount" id="balance">₦248,500.00</div></div><button id="toggleBalance">Hide balance</button></div>
+<div class="actions"><button class="btn" id="addBtn">＋ Add transaction</button><button class="btn alt" id="resetBtn">↻ Reset demo</button></div>
+<div class="stats"><div class="stat"><small>Total income</small><strong class="credit" id="income">₦320,000</strong></div><div class="stat"><small>Total spending</small><strong id="spending">₦71,500</strong></div></div>
+<div class="panel transactions" id="transactions"><div class="tx-head"><h2>Recent transactions</h2><input class="search" id="search" type="search" placeholder="Search transactions…"></div><div id="transactionList"></div><p class="notice">Interactive sample data. Changes stay in this browser session and are not sent to a server.</p></div>
+</section></main>
+<div class="modal" id="modal"><form class="dialog" id="transactionForm">
+    <h2>Add a transaction</h2>
+    <label for="title">Description</label>
+    <input id="title" required maxlength="40" placeholder="e.g. Freelance payment">
+    <label for="value">Amount (₦)</label><input id="value" required type="number" min="1" step="1" placeholder="e.g. 15000">
+    <label for="type">Transaction type</label>
+    <select id="type"><option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select><div class="dialog-actions">
+            <button type="button" class="btn alt" id="cancelBtn">Cancel</button>
+            <button class="btn" type="submit">Add transaction</button>
+        </div></form></div>
+<script>
+const initial = [
+ {name:"Monthly allowance",date:"Today · 9:15 AM",amount:120000,type:"income",icon:"↙"},
+ {name:"Grocery store",date:"Yesterday · 4:32 PM",amount:18500,type:"expense",icon:"🛒"},
+ {name:"Freelance project",date:"Nov 20 · 11:08 AM",amount:200000,type:"income",icon:"↙"},
+ {name:"Internet subscription",date:"Nov 18 · 8:20 AM",amount:12000,type:"expense",icon:"◉"},
+ {name:"Food and drinks",date:"Nov 16 · 2:45 PM",amount:41000,type:"expense",icon:"☕"}
+];
+let transactions = initial.map(item=>({...item}));
+let balanceVisible = true;
+const money = n => "₦"+n.toLocaleString("en-NG");
+function totals(){const income=transactions.filter(t=>t.type==="income").reduce((s,t)=>s+t.amount,0);const spending=transactions.filter(t=>t.type==="expense").reduce((s,t)=>s+t.amount,0);return {income,spending,balance:248500+income-320000-(spending-71500)}}
+function render(){
+ const t=totals();document.getElementById("balance").textContent=balanceVisible?money(t.balance):"••••••••";
+ document.getElementById("income").textContent=money(t.income);document.getElementById("spending").textContent=money(t.spending);
+ const q=document.getElementById("search").value.toLowerCase();
+ const filtered=transactions.filter(x=>x.name.toLowerCase().includes(q));
+ document.getElementById("transactionList").innerHTML=filtered.length?filtered.map(x=>`<div class="tx"><div class="tx-left"><div class="tx-icon">${x.icon}</div><div><div class="tx-name">${escapeHtml(x.name)}</div><div class="tx-date">${x.date}</div></div></div><div class="tx-amount ${x.type==="income"?"credit":""}">${x.type==="income"?"+":"−"}${money(x.amount)}</div></div>`).join(""):'<div class="empty">No matching transactions found.</div>';
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+document.getElementById("toggleBalance").onclick=()=>{balanceVisible=!balanceVisible;document.getElementById("toggleBalance").textContent=balanceVisible?"Hide balance":"Show balance";render()};
+document.getElementById("search").addEventListener("input",render);
+const modal=document.getElementById("modal");document.getElementById("addBtn").onclick=()=>modal.classList.add("open");document.getElementById("cancelBtn").onclick=()=>modal.classList.remove("open");
+document.getElementById("transactionForm").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("title").value.trim(),amount=Number(document.getElementById("value").value),type=document.getElementById("type").value;if(!name||!Number.isFinite(amount)||amount<=0)return;transactions.unshift({name,date:"Just now",amount,type,icon:type==="income"?"↙":"↗"});e.target.reset();modal.classList.remove("open");render()});
+document.getElementById("resetBtn").onclick=()=>{transactions=initial.map(item=>({...item}));document.getElementById("search").value="";render()};
+render();
+</script></body></html>
